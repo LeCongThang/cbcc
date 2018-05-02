@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body id="body_contetn">
+    <input type="text" id="card_id_input" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#card_id_input').focus();
+
+        });
+
+    </script>
+    <script>
+        // $('#card_id_input').change(function () {
+        //     // console.log($(this).val());
+        //     $(this).val('');
+        //     $(this).focus();
+        // })
+        $("#body_contetn").on('click', function () {
+            $('#card_id_input').focus();
+        });
+        $("#card_id_input").on("input", function (e) {
+            console.log($(this).val());
+            $(this).val('');
+            $(this).focus();
+        });
+    </script>
+</body>
+
+</html>
